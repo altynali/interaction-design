@@ -9,9 +9,11 @@ function App() {
   return (
     <Layout>
       <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+          </Routes>
+        </main>
       </Suspense>
     </Layout>
   )
