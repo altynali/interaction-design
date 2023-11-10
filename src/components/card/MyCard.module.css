@@ -1,24 +1,29 @@
-.card {
+.root {
   display: flex;
-  min-height: 100%;
+  flex-wrap: wrap;
+}
+
+.media {
+  width: 150px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 700px) {
+  .media {
+    min-width: 150px;
+    width: 100%;
+  }
 }
 
 .content {
-  margin: 0 15px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.buttonWrapper {
-  display: flex;
   padding: 10px;
-  justify-content: end;
-  align-items: flex-end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.button {
-  background-color: #ff5733;
-  color: #fff;
+.content > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

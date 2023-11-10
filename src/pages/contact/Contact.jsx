@@ -1,15 +1,13 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material"
-import { MyCard } from "../../components/card/MyCard"
-import classes from "./Dashboard.module.css"
-import { cards } from "./data"
+import classes from "./Contact.module.css"
 
-const Dashboard = () => {
+const Contact = () => {
   return (
     <Box>
       <Box className={classes.hero}>
         <Container maxWidth="md">
-          <Typography component="h1" variant="h2" align="center" gutterBottom>
-            Dashboard page
+          <Typography variant="h3" align="center" gutterBottom>
+            Contact page
           </Typography>
           <Typography variant="h5" align="center" paragraph>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
@@ -24,21 +22,8 @@ const Dashboard = () => {
           </Grid>
         </Container>
       </Box>
-      <Container maxWidth="lg">
-        <Grid
-          container
-          alignItems="center"
-          justifyContent="center"
-          gap={1}
-          className={classes.root}
-        >
-          {cards.length !== 0
-            ? cards?.map((card) => <MyCard {...card} key={card.id} />)
-            : "no cards"}
-        </Grid>
-      </Container>
     </Box>
   )
 }
 
-export default Dashboard
+export default Contact

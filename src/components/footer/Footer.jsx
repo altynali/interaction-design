@@ -1,4 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material"
+import { NavLink } from "react-router-dom"
+import classes from "./Footer.module.css"
 
 export const Footer = () => {
   return (
@@ -11,15 +13,31 @@ export const Footer = () => {
         paddingBottom: "1rem",
         marginTop: "auto",
         color: "white",
+        textAlign: "center",
       }}
     >
       <Container maxWidth="lg">
-        <Grid container direction="column" alignItems="center">
-          <Grid item xs={12}>
-            <Typography variant="h5">React App</Typography>
+        <Grid container alignItems="center" justifyContent="center" gap={1}>
+          <Grid item xs={10} md={3}>
+            <NavLink to="/about">
+              <Typography variant="body2" className={classes.link}>
+                O nas
+              </Typography>
+            </NavLink>
           </Grid>
-          <Grid item xs={12}>
-            <Typography variant="body2">Interakcni design 2023</Typography>
+          <Grid item xs={10} md={3}>
+            <NavLink to="/contact">
+              <Typography variant="body2" className={classes.link}>
+                Kontakty
+              </Typography>
+            </NavLink>
+          </Grid>
+          <Grid item xs={10} md={3}>
+            <NavLink to="/socialMedia">
+              <Typography variant="body2" className={classes.link}>
+                Soc site
+              </Typography>
+            </NavLink>
           </Grid>
         </Grid>
       </Container>

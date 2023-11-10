@@ -1,0 +1,13 @@
+.gridItem {
+  display: flex;
+}
+
+.myLink {
+  display: flex;
+}
+
+.myButton {
+  display: flex;
+  width: 110px;
+  height: 100px;
+}

@@ -1,4 +1,6 @@
 import { AppBar, Toolbar } from "@mui/material"
+import { NavLink } from "react-router-dom"
+import classes from "./Header.module.css"
 
 export const Header = () => {
   return (
@@ -9,8 +11,11 @@ export const Header = () => {
           alignItems: "center",
         }}
       >
+        <NavLink to="/" className={classes.link}>
+          <div>Home</div>
+        </NavLink>
         <div>Logo</div>
-        <div>Header</div>
+        <div>Interakcni design 2023</div>
       </Toolbar>
     </AppBar>
   )

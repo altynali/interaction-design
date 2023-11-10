@@ -1,0 +1,10 @@
+.root {
+  width: 100%;
+  padding: 40px 0;
+  color: #000;
+}
+
+.hero {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
