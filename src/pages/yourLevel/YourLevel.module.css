@@ -4,6 +4,14 @@
 }
 
 .hero {
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 3rem;
+}
+
+.button {
+  color: #fff;
+}
+
+.button a {
+  color: #fff;
 }

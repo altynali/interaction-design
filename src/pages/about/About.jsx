@@ -6,20 +6,39 @@ const About = () => {
     <Box>
       <Box className={classes.hero}>
         <Container maxWidth="md">
-          <Typography variant="h3" align="center" gutterBottom>
-            About page
+          <Typography variant="h5" align="center" gutterBottom>
+            Vítejte na Band-Mate,
           </Typography>
-          <Typography variant="h5" align="center" paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            facilis earum, illo, ipsam eos aliquam corporis mollitia maiores ad
-            totam minus voluptatem quasi nam natus ullam sit quisquam animi vel.
+          <Typography variant="body1" align="center" paragraph>
+            Jsme místo, které propojuje různé hudební talenty a kde vznikají
+            nová přátelství. Naše stránka vznikla s jediným cílem – propojit
+            hudební nadšence na základě jejich vášně k určitému nástroji a
+            úrovni dovedností.
           </Typography>
-          <Grid container alignItems="center" justifyContent="center" gap={2}>
+          <Typography variant="body1" align="center" paragraph>
+            Bez ohledu na to, zda jste začátečník hrající první tóny na kytaru,
+            profesionální klávesista nebo vášnivý bubeník, zde najdete komunitu
+            lidí se stejným zaujetím. Co nás odlišuje? Naše platforma vám
+            umožňuje procházet inzeráty hudebníků podle konkrétních nástrojů a
+            úrovně dovedností. To vám usnadní najít ty správné parťáky pro vaše
+            hudební projekty nebo jednoduše pro neformální jamování.
+          </Typography>
+          <Typography variant="body1" align="center" paragraph>
+            Věříme, že hudba je univerzálním jazykem spojujícím lidi po celém
+            světě. Připojte se k nám na naší cestě při propojování hudebního
+            světa. Naše komunita je otevřená, přátelská a plná inspirace. Buďte
+            součástí této hudební rodiny na naší stránce, kde se snoubí vášeň,
+            talent a nekonečné možnosti.
+          </Typography>
+          <Typography variant="body2" align="center" paragraph>
+            #HudebníRodina #SpolečněHrajeme
+          </Typography>
+          {/* <Grid container alignItems="center" justifyContent="center" gap={2}>
             <Button variant="contained" className={classes.leftButton}>
               Main call to action
             </Button>
             <Button variant="outlined">Secondary action</Button>
-          </Grid>
+          </Grid> */}
         </Container>
       </Box>
     </Box>

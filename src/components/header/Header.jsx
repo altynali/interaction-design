@@ -1,6 +1,7 @@
-import { AppBar, Toolbar } from "@mui/material"
+import { AppBar, Box, Toolbar } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import classes from "./Header.module.css"
+import logo_band from "../../assets/logo_band.png"
 
 export const Header = () => {
   return (
@@ -12,10 +13,25 @@ export const Header = () => {
         }}
       >
         <NavLink to="/" className={classes.link}>
-          <div>Home</div>
+          Home
         </NavLink>
-        <div>Logo</div>
-        <div>Interakcni design 2023</div>
+        <div>
+          <img
+            src={logo_band}
+            alt="Logo"
+            style={{
+              width: 150,
+              height: 80,
+            }}
+          />
+        </div>
+        <NavLink
+          to="https://jpband.cz/"
+          target="_blank"
+          className={classes.link}
+        >
+          JP Band
+        </NavLink>
       </Toolbar>
     </AppBar>
   )

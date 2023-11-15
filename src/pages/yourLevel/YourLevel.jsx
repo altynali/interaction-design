@@ -1,28 +1,46 @@
-import { Box, Container, Grid, Typography } from "@mui/material"
+import { Box, Button, Container, Grid, Typography } from "@mui/material"
 import classes from "./YourLevel.module.css"
 import { levels } from "./data"
 import { MyButton } from "../../components/button/MyButton"
+import { NavLink, useParams } from "react-router-dom"
 
 const YourLevel = () => {
+  const { instrument } = useParams()
+
   return (
     <Box>
-      <Box className={classes.hero}>
-        {/* <Container maxWidth="md"> */}
-        <Typography variant="h3" align="center" gutterBottom>
-          Your Level page
+      <Grid container alignItems="center" justifyContent="left" gap={1}>
+        <Button
+          variant="contained"
+          color="warning"
+          className={classes.button}
+          sx={{ margin: 2 }}
+        >
+          <NavLink to="/">Zpet</NavLink>
+        </Button>
+        {/* <Grid container alignItems="center" justifyContent="left" gap={1}> */}
+        <Typography variant="body2">nástroj:</Typography>
+        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+          {instrument}
         </Typography>
-        {/* <Typography variant="h5" align="center" paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-            facilis earum, illo, ipsam eos aliquam corporis mollitia maiores ad
-            totam minus voluptatem quasi nam natus ullam sit quisquam animi vel.
+        {/* </Grid> */}
+      </Grid>
+      <Box className={classes.hero}>
+        <Container maxWidth="md">
+          <Typography variant="h6" align="center" gutterBottom>
+            Chápeme že i když jsme všichni hudební nadšenci, tak naše schopnosti
+            se mohou lišit.
           </Typography>
-          <Grid container alignItems="center" justifyContent="center" gap={2}>
-            <Button variant="contained" className={classes.leftButton}>
-              Main call to action
-            </Button>
-            <Button variant="outlined">Secondary action</Button>
-          </Grid> */}
-        {/* </Container> */}
+          <Typography
+            variant="body1"
+            sx={{ fontWeight: "bold" }}
+            align="center"
+            gutterBottom
+          >
+            Vyber svou hudební úroveň, popřípadě úroveň která by ti vyhovovala a
+            pokračuj dál k inzerátům:
+          </Typography>
+        </Container>
       </Box>
 
       <Container maxWidth="lg">
@@ -35,7 +53,11 @@ const YourLevel = () => {
         >
           {levels.length !== 0
             ? levels?.map((level) => (
-                <MyButton {...level} path="/advertisementList" />
+                <MyButton
+                  {...level}
+                  path={`/${instrument}/${level.text}`}
+                  key={level.id}
+                />
               ))
             : "no cards"}
         </Grid>

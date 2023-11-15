@@ -9,6 +9,6 @@ export const levels = [
   },
   {
     id: 3,
-    text: "Zábava/Jam",
+    text: "Zábava",
   },
 ]

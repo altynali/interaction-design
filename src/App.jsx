@@ -19,9 +19,12 @@ function App() {
           <Routes>
             {/* sem pridavame stranky co chceme */}
             <Route path="/" element={<Home />} />
-            <Route path="/yourLevel" element={<YourLevel />} />
-            <Route path="/advertisementList" element={<AdvertisementList />} />
-            <Route path="/advertisement" element={<Advertisement />} />
+            <Route path="/:instrument" element={<YourLevel />} />
+            <Route path="/:instrument/:level" element={<AdvertisementList />} />
+            <Route
+              path="/advertisement/:id/:instrument/:level"
+              element={<Advertisement />}
+            />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/socialMedia" element={<SocialMedia />} />
