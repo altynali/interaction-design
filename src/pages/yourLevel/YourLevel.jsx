@@ -16,7 +16,7 @@ const YourLevel = () => {
           className={classes.button}
           sx={{ margin: 2 }}
         >
-          <NavLink to="/">Zpet</NavLink>
+          <NavLink to="/">Zpět</NavLink>
         </Button>
         {/* <Grid container alignItems="center" justifyContent="left" gap={1}> */}
         <Typography variant="body2">nástroj:</Typography>

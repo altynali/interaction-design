@@ -13,7 +13,7 @@ export const Header = () => {
         }}
       >
         <NavLink to="/" className={classes.link}>
-          Home
+          Domov
         </NavLink>
         <div>
           <img

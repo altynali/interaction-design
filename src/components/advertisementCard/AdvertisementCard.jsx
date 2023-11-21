@@ -1,13 +1,6 @@
 import Card from "@mui/material/Card"
 import classes from "./AdvertisementCard.module.css"
-import {
-  Box,
-  Button,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@mui/material"
+import { Button, CardContent, CardMedia, Grid, Typography } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import { formattedDate } from "../../utils"
 
@@ -52,12 +45,10 @@ export const AdvertisementCard = ({
         >
           <Typography variant="body2">{hashTag}</Typography>
           <Button variant="contained" className={classes.button}>
-            <NavLink to={`/${instrument}/${level}`}>Zpet</NavLink>
+            <NavLink to={`/${instrument}/${level}`}>Zpět</NavLink>
           </Button>
         </Grid>
       </CardContent>
     </Card>
   )
 }
-
-

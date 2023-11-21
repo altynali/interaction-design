@@ -13,11 +13,6 @@ export const MyCard = ({
 }) => {
   return (
     <Card className={classes.root}>
-      {/* <img
-        className={classes.media}
-        src={imageUrl}
-        alt={imageAlt}
-      /> */}
       <CardContent className={classes.content}>
         <Typography variant="h5" className={classes.contentChild}>
           {title}

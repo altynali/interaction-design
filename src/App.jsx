@@ -17,7 +17,6 @@ function App() {
       <Suspense fallback={<Loader />}>
         <main>
           <Routes>
-            {/* sem pridavame stranky co chceme */}
             <Route path="/" element={<Home />} />
             <Route path="/:instrument" element={<YourLevel />} />
             <Route path="/:instrument/:level" element={<AdvertisementList />} />

@@ -45,7 +45,13 @@ const Advertisement = () => {
 
   return (
     <Box className={classes.root}>
-      <Container maxWidth="lg">
+      <Container
+        maxWidth="lg"
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <AdvertisementCard
           key={advertisement.id}
           title={advertisement.title}

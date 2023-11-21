@@ -1,24 +1,31 @@
 .root {
   display: flex;
-  flex-direction: column;
 }
 
 .media {
   width: 100%;
+  max-width: 400px;
   height: fit-content;
-  object-fit: cover;
+  display: block;
+  object-fit: contain;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 900px) {
+  .root {
+    flex-direction: column;
+    max-width: 500px;
+  }
   .media {
-    width: 400px;
-    height: 530px;
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
   }
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .content > * {

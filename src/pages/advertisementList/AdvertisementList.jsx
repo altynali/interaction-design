@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Select, Typography } from "@mui/material"
+import { Box, Button, Container, Grid, Typography } from "@mui/material"
 import { MyCard } from "../../components/card/MyCard"
 import classes from "./AdvertisementList.module.css"
 import { cards, guitarAmaters } from "./data"
@@ -40,7 +40,7 @@ const AdvertisementList = () => {
           className={classes.button}
           sx={{ margin: 2 }}
         >
-          <NavLink to={`/${instrument}`}>Zpet</NavLink>
+          <NavLink to={`/${instrument}`}>Zpět</NavLink>
         </Button>
         {/* <Grid container alignItems="center" justifyContent="left" gap={1}> */}
         <Typography variant="body2">nástroj:</Typography>
@@ -77,20 +77,20 @@ const AdvertisementList = () => {
           gap={2}
           sx={{ marginTop: 5 }}
         >
-          <Typography>Seradit podle:</Typography>
+          <Typography>Seřadit podle:</Typography>
           <Button
             variant="contained"
             className={classes.button}
             onClick={handleFilterOldFirst}
           >
-            Nejnovejsi
+            Nejnovější
           </Button>
           <Button
             variant="contained"
             className={classes.button}
             onClick={handleFilterNewFirst}
           >
-            Nejstarsi
+            Nejstarší
           </Button>
         </Grid>
 

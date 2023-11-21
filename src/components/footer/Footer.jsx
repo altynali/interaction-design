@@ -21,7 +21,7 @@ export const Footer = () => {
           <Grid item xs={10} md={3}>
             <NavLink to="/about">
               <Typography variant="body2" className={classes.link}>
-                O nas
+                O nás
               </Typography>
             </NavLink>
           </Grid>
@@ -35,7 +35,7 @@ export const Footer = () => {
           <Grid item xs={10} md={3}>
             <NavLink to="/socialMedia">
               <Typography variant="body2" className={classes.link}>
-                Soc site
+                Sociální sítě
               </Typography>
             </NavLink>
           </Grid>

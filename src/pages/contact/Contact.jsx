@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material"
+import { Box, Container, Typography } from "@mui/material"
 import classes from "./Contact.module.css"
 
 const Contact = () => {
