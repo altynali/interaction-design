@@ -3,7 +3,6 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react-hooks/recommended", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -11,17 +10,9 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react-hooks", "prettier"],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
+  "plugins": ["react"],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "prettier/prettier": "warn",
-    "no-warning-comments": "warn",
-    "no-console": "warn"
+    "brace-style": "off",
+    "comma-spacing": "off"
   }
 }
