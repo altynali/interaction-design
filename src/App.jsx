@@ -27,6 +27,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/socialMedia" element={<SocialMedia />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
       </Suspense>
