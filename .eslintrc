@@ -3,12 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "plugin:react-hooks/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
-  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:react-hooks/recommended", "prettier"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -16,16 +11,15 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": ["react-hooks", "prettier"],
   "settings": {
     "react": {
       "version": "detect"
     }
   },
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-empty-interface": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": "warn",
     "no-warning-comments": "warn",
     "no-console": "warn"
