@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 const AdvertisementList = () => {
   const { instrument, level } = useParams()
   const [myArr, setMyArr] = useState(cards)
+  const [clickedButton, setClickedButton] = useState("none")
 
   useEffect(() => {
     if (instrument === "Kytara" && level === "Amatér") {
@@ -22,6 +23,7 @@ const AdvertisementList = () => {
       return new Date(x.date) - new Date(y.date)
     })
     setMyArr(newArr)
+    setClickedButton("right")
   }
 
   const handleFilterOldFirst = () => {
@@ -29,37 +31,45 @@ const AdvertisementList = () => {
       (x, y) => new Date(y.date) - new Date(x.date)
     )
     setMyArr(newArr)
+    setClickedButton("left")
   }
 
   return (
     <Box>
-      <Grid container alignItems="center" justifyContent="left" gap={1}>
-        <Button
-          variant="contained"
-          color="warning"
-          className={classes.button}
-          sx={{ margin: 2 }}
+      <Container maxWidth="md">
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="left"
+          gap={1}
+          sx={{ marginTop: 3 }}
         >
-          <NavLink to={`/${instrument}`}>Zpět</NavLink>
-        </Button>
-        {/* <Grid container alignItems="center" justifyContent="left" gap={1}> */}
-        <Typography variant="body2">nástroj:</Typography>
-        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-          {instrument}
-        </Typography>
-        <Typography variant="body2">úroveň:</Typography>
-        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-          {level}
-        </Typography>
-        {/* </Grid> */}
-      </Grid>
-      <Box className={classes.hero}>
-        <Container maxWidth="md">
-          <Typography variant="h6" align="center" gutterBottom>
-            Zde jsou inzeráty dle tvých předchozích požadavků a preferencí.
-            Zaujal tě některý? Klikni na inzerat.
+          <Grid item sx={12}>
+            <Button
+              variant="contained"
+              color="warning"
+              className={classes.button}
+              sx={{ marginRight: 1 }}
+            >
+              <NavLink to={`/${instrument}`}>Zpět</NavLink>
+            </Button>
+          </Grid>
+          <Typography variant="body2">nástroj:</Typography>
+          <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+            {instrument}
           </Typography>
-          {/* <Typography
+          <Typography variant="body2">úroveň:</Typography>
+          <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+            {level}
+          </Typography>
+        </Grid>
+      </Container>
+      <Container maxWidth="md" className={classes.hero}>
+        <Typography variant="h6" align="center" gutterBottom>
+          Zde jsou inzeráty dle tvých předchozích požadavků a preferencí. Zaujal
+          tě některý? Klikni na inzerat.
+        </Typography>
+        {/* <Typography
             variant="body1"
             sx={{ fontWeight: "bold", marginTop: 5 }}
             align="center"
@@ -67,26 +77,30 @@ const AdvertisementList = () => {
           >
             Stačí pouze jeden klik a dozvíš se více:
           </Typography> */}
-        </Container>
-      </Box>
+      </Container>
+
       <Container maxWidth="lg">
         <Grid
           container
           alignItems="center"
           justifyContent="center"
-          gap={2}
-          sx={{ marginTop: 5 }}
+          gap={1}
+          sx={{ marginTop: 3 }}
+          className={classes.sortGrid}
         >
           <Typography>Seřadit podle:</Typography>
           <Button
             variant="contained"
+            color={clickedButton === "left" ? "secondary" : "primary"}
             className={classes.button}
             onClick={handleFilterOldFirst}
           >
             Nejnovější
           </Button>
+
           <Button
             variant="contained"
+            color={clickedButton === "right" ? "secondary" : "primary"}
             className={classes.button}
             onClick={handleFilterNewFirst}
           >

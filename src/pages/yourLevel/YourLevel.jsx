@@ -9,39 +9,45 @@ const YourLevel = () => {
 
   return (
     <Box>
-      <Grid container alignItems="center" justifyContent="left" gap={1}>
-        <Button
-          variant="contained"
-          color="warning"
-          className={classes.button}
-          sx={{ margin: 2 }}
+      <Container maxWidth="md">
+        <Grid
+          container
+          alignItems="center"
+          justifyContent="left"
+          gap={1}
+          sx={{ marginTop: 3 }}
         >
-          <NavLink to="/">Zpět</NavLink>
-        </Button>
-        {/* <Grid container alignItems="center" justifyContent="left" gap={1}> */}
-        <Typography variant="body2">nástroj:</Typography>
-        <Typography variant="body2" sx={{ fontWeight: "bold" }}>
-          {instrument}
+          <Grid item sx={12}>
+            <Button
+              variant="contained"
+              color="warning"
+              className={classes.button}
+              sx={{ marginRight: 1 }}
+            >
+              <NavLink to="/">Zpět</NavLink>
+            </Button>
+          </Grid>
+          <Typography variant="body2">nástroj:</Typography>
+          <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+            {instrument}
+          </Typography>
+        </Grid>
+      </Container>
+      <Container maxWidth="md" className={classes.hero}>
+        <Typography variant="h6" align="center" gutterBottom>
+          Chápeme že i když jsme všichni hudební nadšenci, tak naše schopnosti
+          se mohou lišit.
         </Typography>
-        {/* </Grid> */}
-      </Grid>
-      <Box className={classes.hero}>
-        <Container maxWidth="md">
-          <Typography variant="h6" align="center" gutterBottom>
-            Chápeme že i když jsme všichni hudební nadšenci, tak naše schopnosti
-            se mohou lišit.
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ fontWeight: "bold" }}
-            align="center"
-            gutterBottom
-          >
-            Vyber svou hudební úroveň, popřípadě úroveň která by ti vyhovovala a
-            pokračuj dál k inzerátům:
-          </Typography>
-        </Container>
-      </Box>
+        <Typography
+          variant="body1"
+          sx={{ fontWeight: "bold" }}
+          align="center"
+          gutterBottom
+        >
+          Vyber svou hudební úroveň, popřípadě úroveň která by ti vyhovovala a
+          pokračuj dál k inzerátům:
+        </Typography>
+      </Container>
 
       <Container maxWidth="lg">
         <Grid

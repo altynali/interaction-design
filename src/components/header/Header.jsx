@@ -1,11 +1,11 @@
-import { AppBar, Box, Toolbar } from "@mui/material"
+import { AppBar, Toolbar } from "@mui/material"
 import { NavLink } from "react-router-dom"
 import classes from "./Header.module.css"
 import logo_band from "../../assets/logo_band.png"
 
 export const Header = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.root}>
       <Toolbar
         sx={{
           justifyContent: "space-around",
@@ -13,7 +13,7 @@ export const Header = () => {
         }}
       >
         <NavLink to="/" className={classes.link}>
-          Domov
+          Domů
         </NavLink>
         <div>
           <img

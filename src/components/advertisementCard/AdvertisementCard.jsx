@@ -44,7 +44,11 @@ export const AdvertisementCard = ({
           gap={2}
         >
           <Typography variant="body2">{hashTag}</Typography>
-          <Button variant="contained" className={classes.button}>
+          <Button
+            color="warning"
+            variant="contained"
+            className={classes.button}
+          >
             <NavLink to={`/${instrument}/${level}`}>Zpět</NavLink>
           </Button>
         </Grid>

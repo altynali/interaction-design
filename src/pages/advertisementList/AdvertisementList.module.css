@@ -16,3 +16,14 @@
 .button a {
   color: #fff;
 }
+
+@media screen and (max-width: 400px) {
+  .sortGrid {
+    display: flex;
+    flex-wrap: nowrap !important;
+    -webkit-box-flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column !important;
+    -webkit-box-flex-direction: column;
+  }
+}
